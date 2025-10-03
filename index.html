@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C++ Basics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>C++ Learning Library</h1>
+    <nav>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#basics">C++ Basics</a></li>
+        <li><a href="#examples">Examples</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro" class="section">
+      <h2>Welcome to my C++ Learning Library!</h2>
+      <p>This site will help you learn C++ with the use of examples and explanations.</p>
+    </section>
+
+    <section id="basics" class="section">
+      <h2>C++ Basics</h2>
+      <p>This section covers the fundamental concepts of C++ programming.</p>
+
+      <section id="printing" class="subsection">
+        <h3>Printing</h3>
+        <p>Basic Printing of a string in C++:</p>
+        <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+
+        <h4>More Printing:</h4>
+        <p>There are multiple ways to print strings in C++. Displayed are some popular and easy ways:</p>
+        <ul>
+          <li>Basic Printing with `std::cout`</li>
+          <li>Printing with variables</li>
+          <li>`Printf` using `cstdio`</li>
+        </ul>
+
+        <h5>Basic Printing:</h5>
+        <pre><code>#include &lt;iostream&gt;
+
+    int main() {
+    // Basic Printing with std::cout
+    std::cout &lt;&lt; "Hello, World!";
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl; // std::endl; makes a new line
+    return 0;
+}
+</code></pre>
+
+        <h5>Printing with Variables:</h5>
+        <pre><code>#include &lt;iostream&gt;
+
+    int main() {
+    // Printing using one variable
+    int number = 0;
+    std::cout &lt;&lt; "The integer value is " &lt;&lt; number &lt;&lt; std::endl;
+
+    // Printing using two variables or more
+    int numberA = 10;
+    int numberB = 20;
+    int numberC = 30;
+
+    std::cout &lt;&lt; "Number A's value is: " &lt;&lt; numberA &lt;&lt; "Number B's value is: " &lt;&lt; numberB &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Number A's value is: " &lt;&lt; numberA &lt;&lt; "Number B's value is: " &lt;&lt; numberB &lt;&lt; "Number C's value is: " &lt;&lt; numberC &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+
+        <h5>Basic Printing with Printf:</h5>
+        <pre><code>#include &lt;cstdio&gt;
+
+    int main() {
+    // Printing normally
+    printf("Hello, World!\n"); // Similar to Python's syntax
+
+    // Printing one variable
+    int number1 = 10;
+    printf("The number I am thinking of is: %d\n", number1);
+
+    // Printing two variables
+    int number2 = 20;
+    printf("The numbers I am thinking of are: %d and %d\n", number1, number2);
+    return 0;
+}
+</code></pre>
+
+        <h4>More about Printing With Printf</h4>
+        <p>Printing with Printf requires very specific syntax. Here are some common format specifiers:</p>
+        <ul>
+          <li>`%d` for integers</li>
+          <li>`%f` for floating-point numbers</li>
+          <li>`%s` for strings</li>
+          <li>`%c` for characters</li>
+          <li>`%lf` for double</li>
+          <li>`%u` for unsigned int</li>
+          <li>`%x` for hexadecimal format</li>
+          <li>`%o` for octal format</li>
+          <li>`%%` to print a percent sign</li>
+        </ul>
+
+        <h5>Variables with Printf:</h5>
+        <pre><code>#include &lt;iostream&gt;
+
+    int main() {
+
+    // Printing an integer
+    int age = 30;
+    printf("My age is: %d\n", age);
+
+    // Printing a double (more precise float)
+    double pi = 3.14159;
+    printf("The value of PI is: %lf\n", pi); // %lf for double
+
+    // Printing a float (with exact precision)
+    float temperature = 25.678f;
+    printf("Current temperature: %.2f degrees Celsius\n", temperature); // .2f for 2 decimal places
+
+    // Printing a character
+    char grade = 'A';
+    printf("Your grade is: %c\n", grade);
+
+    // Printing a string
+    const char* name = "Alice";
+    printf("My name is: %s\n", name);
+
+    // Printing multiple variables in one statement
+    int item_count = 5;
+    double price_per_item = 10.99;
+    printf("You bought %d items at $%.2lf each.\n", item_count, price_per_item);
+
+    // Using width specifiers and flags
+    int value = 123;
+    printf("Right-justified with width 5: %5d\n", value);
+    printf("Left-justified with width 5: %-5d\n", value);
+    printf("Zero-padded with width 5: %05d\n", value);
+
+    // Printing hexadecimal and octal numbers
+    int hex_num = 255;
+    printf("Decimal: %d, Hexadecimal: %x, Octal: %o\n", hex_num, hex_num, hex_num);
+
+    return 0;
+}
+</code></pre>
+      </section>
+
+      <section id="variables" class="subsection">
+        <h3>Variables</h3>
+        <p>Declaring Types of Variables:</p>
+        <p>There are many different kinds of variables in C++. Here are some examples:</p>
+        <ul>
+          <li>`int`: Integers</li>
+          <li>`float`: for floating-point numbers</li>
+          <li>`double`: for double-precision floating-point numbers</li>
+          <li>`char`: for single characters</li>
+          <li>`bool`: for boolean values (true or false)</li>
+          <li>`string`: for strings of text (requires `#include <string>`)</li>
+        </ul>
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+  int myInteger = 42;
+  float myFloat = 3.14f;
+  double myDouble = 2.718281828459;
+  char myChar = 'A';
+  bool myBool = true;
+  std::string myString = "Hello, C++!";
+}
+</code></pre>
+
+<h4>Arithmetic Operators:</h4>
+<p>Arithmetic operators are used to perform mathematical operations. Here are some common arithmetic operators:</p>
+<p>1. <strong>Addition (+)</strong> - Adds two operands<br></p>
+<p>2. <strong>Subtraction (-)</strong> - Subtracts two operands<br></p>
+<p>3. <strong>Multiplication (*)</strong> - Multiplies two operands<br></p>
+<p>4. <strong>Division (/)</strong> - Divides two operands<br></p>
+<p>5. <strong>Modulus (%)</strong> - Returns the remainder of division of two operands<br></p>
+
+<pre><code>#include &lt;iostream&gt;
+
+    int main() {
+      int a = 1;
+      int b = 2;
+
+      std::cout &lt;&lt; "Addition: " &lt;&lt; (a + b) &lt;&lt; std::endl;
+      std::cout &lt;&lt; "Subtraction: " &lt;&lt; (a - b) &lt;&lt; std::endl;
+      std::cout &lt;&lt; "Multiplication: " &lt;&lt; (a * b) &lt;&lt; std::endl;
+      std::cout &lt;&lt; "Division: " &lt;&lt; (a / b) &lt;&lt; std::endl;
+      std::cout &lt;&lt; "Modulus: " &lt;&lt; (a % b) &lt;&lt; std::endl;
+
+      // Example of using multiple arithmetic operators:
+      int c = 3;
+      int d = 4;
+      int e = 5;
+      int f = 6;
+      int result = ((a + b - c) * (d / e) * f) % a
+      std::cout &lt;&lt; "The result of ((1+2-3)*(4/5)) % 1 is: " &lt;&lt; result &lt;&lt; std::endl;
+    
+    return 0;
+}
+</code></pre>
+
+<h4>Relational Operators:</h4>
+<p>Relational operators are used to compare two values. Here are some common relational operators:</p>
+<p>1. <strong>Equal to (==)</strong> - Checks if two operands are equal<br></p>
+<p>2. <strong>Not equal to (!=)</strong> - Checks if two operands are not equal<br></p>
+<p>3. <strong>Greater than (>)</strong> - Checks if the left operand is greater than the right operand<br></p>
+<p>4. <strong>Less than (&lt;&lt;)</strong> - Checks if the left operand is less than the right operand<br></p>
+<p>5. <strong>Greater than or equal to (>=)</strong> - Checks if the left operand is greater than or equal to the right operand<br></p>
+<p>6. <strong>Less than or equal to (&lt;&lt;=)</strong> - Checks if the left operand is less than or equal to the right operand<br></p>
+
+<pre><code>#include &lt;iostream&gt;
+
+    int main() {
+      int a = 5;
+      int b = 10;
+
+      std::cout &lt;&lt; "a == b: " &lt;&lt; (a == b) &lt;&lt; std::endl; // false
+      std::cout &lt;&lt; "a != b: " &lt;&lt; (a != b) &lt;&lt; std::endl; // true
+      std::cout &lt;&lt; "a &gt; b: " &lt;&lt; (a &gt; b) &lt;&lt; std::endl;   // false
+      std::cout &lt;&lt; "a &lt; b: " &lt;&lt; (a &lt; b) &lt;&lt; std::endl;   // true
+      std::cout &lt;&lt; "a &gt;= b: " &lt;&lt; (a &gt;= b) &lt;&lt; std::endl; // false
+      std::cout &lt;&lt; "a &lt;= b: " &lt;&lt; (a &lt;= b) &lt;&lt; std::endl; // true
+      
+    return 0;
+    } </code></pre>
+
+
+<h4>String Methods:</h4>
+<p>In C++, the std::string comes with it many functions. Some include: <br></p>
+<p>1. <strong>length() and size() </strong>- These return the number of characters in the string<br></p>
+<p>2. <strong>substr() </strong>- This returns a substring from the string<br></p>
+<p>3. <strong>append()</strong> - This adds characters to the end of the string<br></p>
+<p>4. <strong>find()</strong> - This finds a substring within the string and returns its position<br></p>
+<p>5. <strong>replace()</strong> - This replaces a portion of the string with another string<br></p>
+<p>6. <strong>at()</strong> - This returns the character at a specific index<br></p>
+<p>7. <strong>clear()</strong> - This clears the contents of the string<br></p>
+<p>8. <strong>empty()</strong> - This checks if the string is empty
+<p>9. <strong>erase()</strong> - This erases characters from specified position and length</p>
+
+<pre><code>
+#include &lt;iostream&gt;
+#include &lt;string&gt; // Required for std::string
+
+int main() {
+    // Using length() and size()
+    std::string myString = "Hello, World!";
+    std::cout &lt;&lt; "Length of string: " &lt;&lt; myString.length() &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Size of string: " &lt;&lt; myString.size() &lt;&lt; std::endl;
+
+    // Using substr()
+    std::string sub = myString.substr(7, 5); // "World"
+    std::cout &lt;&lt; "Substring: " &lt;&lt; sub &lt;&lt; std::endl;
+
+    // Using append()
+    myString.append(" How are you?");
+    std::cout &lt;&lt; "Appended string: " &lt;&lt; myString &lt;&lt; std::endl;
+
+    // Using find()
+    size_t pos = myString.find("World");
+    if (pos != std::string::npos) {
+        std::cout &lt;&lt; "'World' found at position: " &lt;&lt; pos &lt;&lt; std::endl;
+    } else {
+        std::cout &lt;&lt; "'World' not found" &lt;&lt; std::endl;
+    }
+
+    // Using replace()
+    myString.replace(7, 5, "C++");
+    std::cout &lt;&lt; "Replaced string: " &lt;&lt; myString &lt;&lt; std::endl;
+
+    // Using at()
+    char ch = myString.at(1);
+    std::cout &lt;&lt; "Character at index 1: " &lt;&lt; ch &lt;&lt; std::endl;
+
+    // Using clear()
+    myString.clear();
+    std::cout &lt;&lt; "Cleared string: '" &lt;&lt; myString &lt;&lt; "'" &lt;&lt; std::endl;
+
+    // Using empty()
+    if (myString.empty()) {
+        std::cout &lt;&lt; "String is empty" &lt;&lt; std::endl;
+    } else {
+        std::cout &lt;&lt; "String is not empty" &lt;&lt; std::endl;
+    }
+
+    // Using erase()
+    std::string anotherString = "Hello, C++!";
+    anotherString.erase(5, 4); // Erase ", C"
+    std::cout &lt;&lt; "Erased string: " &lt;&lt; anotherString &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+
+
+
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 C++ Learning Library | Learn C++ the easy way.</p>
+  </footer>
+</body>
+</html>

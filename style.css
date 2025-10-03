@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #1b1b1b;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #0d47a1;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #c5cae9;
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.section {
+  background-color: #ffffff;
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subsection {
+  background-color: #f9f9f9;
+  margin-top: 25px;
+  padding: 20px;
+  border-left: 4px solid #0d47a1;
+  border-radius: 8px;
+}
+
+.section h2 {
+  color: #0d47a1;
+  font-size: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.subsection h3 {
+  color: #1565c0;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.subsection h4 {
+  color: #1e88e5;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.subsection h5 {
+  color: #42a5f5;
+  font-size: 1rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+pre {
+  background-color: #263238;
+  color: #eeffff;
+  padding: 20px;
+  overflow-x: auto;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  margin-top: 15px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background-color: #0d47a1;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 -4px 8px rgba(154, 154, 154, 0.2);
+}
+
+footer p {
+  margin: 0;
+}
