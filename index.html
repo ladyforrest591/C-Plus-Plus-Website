@@ -305,7 +305,7 @@ int main() {
 </code></pre>
 
 <h4>More types of Variables: </h4>
-<p>More complex types of variables are also available in C++. Here are some examples, we will go into more detail later on: <br></p>
+<p>More complex types of variables are also available in C++. Here are some examples, we will go into more detail about each of them later on: <br></p>
 <p>1. <strong>Arrays</strong> - A collection of elements of the same type<br></p>
 <p>2. <strong>Vectors</strong> - A dynamic array that can resize itself<br></p>
 <p>3. <strong>Structures (struct)</strong> - A user-defined data type that groups related variables<br></p>
@@ -314,10 +314,80 @@ int main() {
 <pre><code>#include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;string&gt;
-#include &lt;array&gt;
+
+// Initializing Classes - Do outside int main
+class Rectangle {
+public:
+  int width;
+  int height;
+
+  int area() {
+    return width * height
+  }
+}
+
+// Initializing Structs - Do outside int main
+struct Car {
+  std::string Brand;
+  int Mileage;
+};
+
+int main() {
+
+  // Initializing Arrays
+  int numbers[] = {1, 2, 3, 4, 5};
+
+  // Initializing Vectors
+  std::vector<std::string> fruits = {"Apple", "Banana", "Cherry"};
+
+  // Printing values of the variables:
+
+  // Printing array:
+  int arraySize = sizeof(numbers) / sizeof(numbers[0]);
+  cout &lt;&lt; "Array Values: ";
+  for (int i = 0; i &lt; arraySize; ++I) {
+    cout &lt;&lt; numbers[i] &lt;&lt; "";
+  }
+  cout &lt;&lt; endl;
+
+  // Printing vector:
+  cout &lt;&lt; "Vector elements: ";
+    for (const string& fruits : fruits) {
+        cout &lt;&lt; fruit &lt;&lt; " ";
+    }
+  cout &lt;&lt; endl;
+
+  // Printing struct:
+  Car car1 = "Tesla", 10000
+  cout &lt;&lt; "Car Struct - Name: " &lt;&lt; car1.Brand &lt;&lt; ", Mileage: " &lt;&lt; car1.Mileage &lt;&lt; endl;
+
+  // Printing class:
+  Rectangle rect1;
+
+  rect1.width = 8;
+  rect1.height = 7;
+  rect1.print();
+  
+  return 0;
+
+
+}
+</code></pre>
+
+<h4>Indexing:</h4>
+<p>Indexing is the practice of accessing individual elements in a container using an index.</p>
+<p>Note that C++ indexing is ZERO-BASED. The first element in zero.</p>
+<p>Here are some methods to index in arrays, vectors and strings.</p>
+
+<h5>Indexing in Arrays:</h5>
+<pre><code>
+  
 
 
 
+
+
+</code></pre>
 
       </section>
     </section>
